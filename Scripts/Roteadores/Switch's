@@ -22,29 +22,3 @@ password SenhadaConsole
 login
 exit
 service password-encryption
-
-SCRIPT SWITCHS: 
-
-enable 
-configure terminal 
-hostname SW-01
-banner motd "ACESSO AUTORIZADO APENAS PARA PESSOAS QUALIFICADAS"
-enable secret SennhaEnable
-ip domain-name Senai.local
-crypto key generate rsa general-key modulus 1024
-username GuilhermeC privilege 15 secret Batatinha1
-username MatheusL privilege 15 secret Batatinha2
-username MatheusB privilege 15 secret Batatinha3	
-username MatheusP privilege 15 secret Batatinha4
-username JadissonR privilege 15 secret Batatinha5
-line console 0
-password SenhadaConosole
-login 
-exit 
-service password-encryption
-line vty  0 15 
-password SenhadaVTY
-trasnport input ssh
-exec-timeout 5
-login local 
-exit
