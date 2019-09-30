@@ -44,7 +44,7 @@ switchport mode access
 switchport access vlan 10 
 exit 
 interface vlan 10 
-ip address 172.16.0.128 255.255.255.128
+ip address 172.16.1.128 255.255.255.128
 description REDE 1 
 no shutdown 
 exit
